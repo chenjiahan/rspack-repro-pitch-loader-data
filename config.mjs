@@ -18,6 +18,14 @@ const config = {
   entry: {
     main: "./src/index",
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: "./loader.js",
+      },
+    ],
+  },
   plugins: [new HtmlWebpackPlugin()],
   output: {
     clean: true,
